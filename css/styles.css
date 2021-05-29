@@ -20,6 +20,7 @@
   --hero-backdrop-color: rgba(0, 0, 0, 0.2);
   --close-btn-border-color: rgba(0, 0, 0, 0.1);
   --projects-overlay-color: rgba(33, 150, 243, 0.9);
+  --doing-overlay-color: rgba(47, 48, 58, 0.8);
   --animation-duration: 250ms;
   --animation-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -407,9 +408,36 @@ body {
 }
 
 .doing-list-item {
+  position: relative;
+
   margin-top: 30px;
   margin-left: 30px;
   flex-basis: calc((100% - 90px) / 3);
+}
+
+.doing-list-overlay {
+  position: absolute;
+  overflow: auto;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  width: 100%;
+  height: 70px;
+
+  background-color: var(--doing-overlay-color);
+}
+
+.doing-list-title {
+  margin: auto;
+
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--main-white-color);
 }
 /* End Doing */
 
